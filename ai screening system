@@ -1,0 +1,110 @@
+# AI-Resume-Screening-System
+An intelligent AI-powered Resume Screening System designed to automate candidate shortlisting using Machine Learning and Natural Language Processing (NLP). This project analyzes resumes, extracts important skills, matches candidates with job requirements, and ranks applicants based on relevance and qualification. 
+```bash
+AI-Resume-Screening-System/
+│
+├── data/
+│   ├── resumes.csv
+│   ├── job_description.txt
+│   └── processed_data.csv
+│
+├── notebooks/
+│   └── Resume_Screening.ipynb
+│
+├── models/
+│   └── resume_classifier.pkl
+│
+├── src/
+│   ├── data_preprocessing.py
+│   ├── feature_extraction.py
+│   ├── model_training.py
+│   ├── prediction.py
+│   └── utils.py
+│
+├── outputs/
+│   ├── accuracy_report.png
+│   ├── confusion_matrix.png
+│   └── ranked_candidates.csv
+│
+├── requirements.txt
+├── README.md
+├── app.py
+└── .gitignore
+```
+
+TOOLS AND LIBRARIES USED 
+| Library      | Purpose                    |
+| ------------ | -------------------------- |
+| Python       | Main programming language  |
+| Pandas       | Data handling and analysis |
+| NumPy        | Numerical operations       |
+| Matplotlib   | Data visualization         |
+| Seaborn      | Advanced visualization     |
+| Scikit-learn | Machine Learning & NLP     |
+
+How Each Library Is Used
+1. Pandas
+Used to load and manage resume datasets.
+
+import pandas as pd
+df = pd.read_csv("resumes.csv")
+print(df.head())
+
+
+2. NumPy
+Used for numerical calculations.
+
+import numpy as np
+scores = np.array([0.85, 0.76, 0.91])
+print(scores.mean())
+
+
+3. Matplotlib
+Used to create graphs and charts.
+
+import matplotlib.pyplot as plt
+plt.plot([1,2,3], [4,5,6])
+plt.title("Resume Scores")
+plt.show()
+
+
+4. Seaborn
+Used for advanced data visualization.
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+sns.histplot([70,80,90,85])
+plt.show()
+
+
+5. Scikit-learn
+Used for TF-IDF vectorization and similarity calculation
+
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+
+
+PROJECT FLOW 
+Resume Dataset
+      ↓
+Data Cleaning (Pandas)
+      ↓
+Text Vectorization (Scikit-learn)
+      ↓
+Similarity Calculation
+      ↓
+Visualization (Matplotlib & Seaborn)
+      ↓
+Candidate Ranking
+
+
+Simple AI Concepts Used
+TF-IDF Vectorization (Term Frequency-Inverse Document Frequency) 
+Converts text into numerical vectors.
+Cosine Similarity
+Measures similarity between resume and job description.
+cos(θ)=
+∥A∥∥B∥
+A⋅B
+
+  ​
